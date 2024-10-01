@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Care Stream System</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+      }
+      .header {
+        background-color: #333;
+        color: white;
+        padding: 1em;
+        text-align: center;
+      }
+      .container {
+        flex: 1;
+        max-width: 1200px;
+        margin: auto;
+        padding: 1em;
+      }
+      .service-link {
+        display: block;
+        text-decoration: none;
+      }
+      .service {
+        background: white;
+        margin: 45px 0;
+        padding: 15px 80px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, box-shadow 0.3s;
+        text-align: center;
+      }
+      .service:hover {
+        background-color: #f0f0f0;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+      .service h2 {
+        margin-top: 0;
+      }
+      .service p {
+        margin-bottom: 0;
+      }
+      @media (max-width: 768px) {
+        .container {
+          padding: 0.5em;
+        }
+        .service {
+          margin: 0.5em 0;
+          padding: 0.5em;
+        }
+      }
+      a {
+        color: black;
+      }
+      .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Care Stream System</h1>
+    </div>
+    <div class="container">
+      <a href="c1\index.html" class="service-link" target="_blank">
+        <div class="service">
+          <h2>OPD Appointment Booking</h2>
+          <p>
+            Streamline patient appointments with our easy-to-use scheduling
+            system. Book, reschedule, and cancel appointments with just a few
+            clicks.
+          </p>
+        </div>
+      </a>
+      <a href="c2\index.html" class="service-link" target="_blank">
+        <div class="service">
+          <h2>Availability of Beds and Booking</h2>
+          <p>
+            Keep track of bed availability in real-time to ensure efficient
+            hospital operations and improve patient care.
+          </p>
+        </div>
+      </a>
+      <a href="c3\index.html" class="service-link" target="_blank">
+        <div class="service">
+          <h2>Inventory Management and Billing</h2>
+          <p>
+            Access and manage medical records securely online. Patients and
+            healthcare providers can view and update information as needed.
+          </p>
+        </div>
+      </a>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2024 Care Stream System. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

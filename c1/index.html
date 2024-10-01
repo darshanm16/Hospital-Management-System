@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OPD Appointment System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>OPD Appointment Booking</h1>
+      <div class="appointment-form">
+        <form id="bookingForm">
+          <!-- Step 1: Select Location -->
+          <label for="locationSelect">Select Location:</label>
+          <select id="locationSelect" name="location">
+            <option value="">--Select Location--</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Mysore">Mysore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Delhi">Delhi</option>
+          </select>
+
+          <!-- Step 2: Select Hospital -->
+          <label for="hospitalSelect">Select Hospital:</label>
+          <select id="hospitalSelect" name="hospital" disabled>
+            <option value="">--Select Hospital--</option>
+          </select>
+
+          <!-- Step 3: Select Specialist Type -->
+          <label for="specialistSelect">Select Specialist Type:</label>
+          <select id="specialistSelect" name="specialist" disabled>
+            <option value="">--Select Specialist--</option>
+            <option value="cardiology">Cardiologist</option>
+            <option value="neurology">Neurologist</option>
+            <option value="orthopedics">Orthopedics</option>
+          </select>
+
+          <!-- Step 4: Select Doctor -->
+          <label for="doctorSelect">Select Doctor:</label>
+          <select id="doctorSelect" name="doctor" disabled>
+            <option value="">--Select Doctor--</option>
+          </select>
+
+          <!-- Step 5: Select Date -->
+          <label for="dateSelect">Select Date:</label>
+          <input type="date" id="dateSelect" name="date" required disabled />
+
+          <!-- Step 6: Select Time Slot -->
+          <label for="timeSelect">Select Time Slot:</label>
+          <select id="timeSelect" name="time" required disabled></select>
+
+          <div class="buttons">
+            <button type="submit" disabled>Book Appointment</button>
+            <button type="button" id="clearButton">Clear</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="appointmentList">
+        <h2>Appointments Booked</h2>
+        <ul id="appointments"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

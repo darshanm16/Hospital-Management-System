@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Bed Availability</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hospital Bed Availability</h1>
+
+      <!-- Place and Hospital Selection Form -->
+      <form id="hospital-form">
+        <label for="place">Select Place:</label>
+        <select id="place" required>
+          <option value="" disabled selected>Select Place</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Mysore">Mysore</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Delhi">Delhi</option>
+        </select>
+
+        <label for="hospital">Select Hospital:</label>
+        <select id="hospital" required>
+          <option value="" disabled selected>Select Hospital</option>
+          <!-- Hospitals will be dynamically populated based on the selected city -->
+        </select>
+
+        <!-- Bed Selection Form -->
+        <label for="bedType">Select Bed Type:</label>
+        <select id="bedType" required>
+          <option value="" disabled selected>Select Bed</option>
+          <option value="AC">AC Bed</option>
+          <option value="General">General Bed</option>
+          <option value="ICU">ICU Bed</option>
+          <option value="FirstClass">First Class Bed</option>
+        </select>
+
+        <label for="admissionDate">Select Admission Date:</label>
+        <input type="date" id="admissionDate" required />
+
+        <label for="admissionTime">Select Admission Time:</label>
+        <input type="time" id="admissionTime" required />
+
+        <button type="submit">Check Availability</button>
+      </form>
+
+      <!-- Bed Availability Section -->
+      <div id="availability" class="hidden">
+        <p id="availabilityMessage"></p>
+        <button id="confirmAdmission" class="hidden">Confirm Admission</button>
+      </div>
+
+      <!-- Nearby Hospital Section -->
+      <div id="nearbyHospitals" class="hidden">
+        <h2>No Bed Available</h2>
+        <p>Searching nearby hospitals...</p>
+        <button id="sendRequest">Send Request to nearby hospital</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

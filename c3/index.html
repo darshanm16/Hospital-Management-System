@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Medical Inventory and Billing System</title>
+  </head>
+  <body>
+    <h1>Medical Inventory and Billing System</h1>
+    <div class="container">
+      <div class="inventory">
+        <h2>Medicine Inventory</h2>
+        <table id="inventory-table">
+          <thead>
+            <tr>
+              <th>Medicine</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Expiry Date</th>
+            </tr>
+          </thead>
+          <tbody id="inventory-body"></tbody>
+        </table>
+        <button type="button" id="check-inventory-button">
+          Check Inventory
+        </button>
+      </div>
+
+      <div class="billing">
+        <h2>Patient Details</h2>
+        <form id="billing-form">
+          <label for="patient-name">Patient Name:</label>
+          <input type="text" id="patient-name" required />
+
+          <label for="patient-age">Patient Age:</label>
+          <input type="number" id="patient-age" required />
+
+          <label for="medicine-select">Select Medicine:</label>
+          <select id="medicine-select"></select>
+
+          <label for="quantity-input">Enter Quantity:</label>
+          <input type="number" id="quantity-input" min="1" />
+
+          <button type="button" id="add-medicine-button" disabled>
+            Add Medicine to Bill
+          </button>
+        </form>
+      </div>
+
+      <div class="bill">
+        <h2>Bill Summary</h2>
+        <table id="bill-table">
+          <thead>
+            <tr>
+              <th>Medicine</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="bill-body"></tbody>
+        </table>
+        <h3 id="total">Total: 0</h3>
+        <button id="print-bill" style="display: none">Print Bill</button>
+        <button type="button" id="new-bill-button" style="display: none">
+          New Bill
+        </button>
+
+        <div id="patient-info"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+}
+
+select,
+input,
+button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin: auto;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#availabilityMessage {
+  margin: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+}
+#availability {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+p {
+  text-align: center;
+  margin-bottom: 5px;
+}
