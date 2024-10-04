@@ -160,3 +160,10 @@ tr:hover {
   height: 40px;
   margin-top: 10px;
 }
+
+@media (max-width: 450px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
